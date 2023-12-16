@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, models, model } from "mongoose";
 
 const modelSchema = new Schema({
   title: { type: String, required: true },
@@ -6,4 +6,4 @@ const modelSchema = new Schema({
   price: { type: Number, required: true },
 });
 
-export const Product = model("Product", modelSchema);
+export const Product = models.Product || model("Product", modelSchema);
