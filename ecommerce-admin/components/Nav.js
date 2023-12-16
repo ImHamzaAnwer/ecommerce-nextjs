@@ -51,7 +51,7 @@ export default function Nav() {
         <Link
           href={"/products"}
           className={
-            router.pathname === "/products" ? activeLink : inactiveLink
+            router.pathname.includes("/products") ? activeLink : inactiveLink
           }
         >
           <svg
@@ -73,7 +73,9 @@ export default function Nav() {
 
         <Link
           href={"/orders"}
-          className={router.pathname === "/orders" ? activeLink : inactiveLink}
+          className={
+            router.pathname.includes("/orders") ? activeLink : inactiveLink
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +97,7 @@ export default function Nav() {
         <Link
           href={"/settings"}
           className={
-            router.pathname === "/settings" ? activeLink : inactiveLink
+            router.pathname.includes("/settings") ? activeLink : inactiveLink
           }
         >
           <svg
